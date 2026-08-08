@@ -33,11 +33,56 @@
         color: #777;
         font-size: 13px;
       }
-      .easter-audio audio {
+      .easter-audio-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 18px 40px;
+        align-items: flex-end;
+      }
+      .easter-audio-item {
+        min-width: 0;
+      }
+      .easter-audio-item.main {
+        flex: 1 1 280px;
+        max-width: 360px;
+      }
+      .easter-audio-item.aside {
+        flex: 0 1 200px;
+        max-width: 220px;
+      }
+      .easter-audio-item.main p {
+        margin: 0 0 8px 0;
+        color: #666;
+        font-size: 13px;
+      }
+      .easter-audio-item.aside p {
+        margin: 0 0 6px 0;
+        color: #666;
+        font-size: 11px;
+        font-style: italic;
+        line-height: 1.35;
+      }
+      .easter-audio-item.main audio {
         width: 100%;
-        max-width: 320px;
         height: 32px;
-        margin-top: 6px;
+      }
+      .easter-audio-item.aside audio {
+        width: 100%;
+        height: 28px;
+        opacity: 0.72;
+        transform: scale(0.96);
+        transform-origin: left center;
+      }
+      .easter-audio-footer {
+        margin: 20px 0 0 0;
+        padding-top: 14px;
+        border-top: 1px solid #eee;
+        color: #999;
+        font-size: 12px;
+      }
+      .page-footer {
+        margin: 36px 0 8px 0;
+        text-align: center;
       }
     </style>
   </head>
@@ -114,20 +159,29 @@
                 <p class="video-fallback"><a href="https://youtu.be/JufzpDobFxQ">Open on YouTube</a></p>
 
                 <div class="easter-audio">
-                  <p style="margin:0 0 10px 0; color:#777; font-size:13px;">
-                    A fun little moment from one of my old quartets messing around:
-                  </p>
-                  <audio controls preload="none">
-                    <source src="media/quartet-fun.m4a" type="audio/mp4">
-                    Your browser does not support the audio element.
-                  </audio>
-                  <p style="margin:12px 0 0 0; color:#777; font-size:13px;">
+                  <div class="easter-audio-row">
+                    <div class="easter-audio-item main">
+                      <p>A fun little moment from one of my old quartets messing around:</p>
+                      <audio controls preload="none">
+                        <source src="media/quartet-fun.m4a" type="audio/mp4">
+                        Your browser does not support the audio element.
+                      </audio>
+                    </div>
+                    <div class="easter-audio-item aside">
+                      <p>(this is what it's supposed to sound like 🙂)</p>
+                      <audio controls preload="none">
+                        <source src="media/quartet-correct.m4a" type="audio/mp4">
+                        Your browser does not support the audio element.
+                      </audio>
+                    </div>
+                  </div>
+                  <p class="easter-audio-footer">
                     Old practice Instagram (inactive): <a href="https://www.instagram.com/lucyshreds/">@lucyshreds</a>
                   </p>
                 </div>
 
-                <p style="text-align:center">
-                  <a href="index.html">back</a>
+                <p class="page-footer">
+                  <a href="index.html">back to main page</a>
                 </p>
               </td>
             </tr>
