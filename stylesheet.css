@@ -140,3 +140,24 @@ span.highlight {
     display: inline-block;
     border-radius: 10px;
 }
+
+.news {
+  width: 100%;
+  border: 0px;
+  border-spacing: 0px;
+  border-collapse: separate;
+  margin-top: 8px;
+}
+
+.news td {
+  padding: 3px 0px;
+  vertical-align: top;
+}
+
+.news-date {
+  width: 80px;
+  min-width: 80px;
+  padding-right: 12px;
+  color: #666;
+  white-space: nowrap;
+}
